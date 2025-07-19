@@ -1,20 +1,20 @@
 "use client";
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X} from "lucide-react"
-import Image from "next/image"
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [onMarquee, setOnMarquee] = useState(false)
-  const notice = "" //edit here to activate notice
+  const [isOpen, setIsOpen] = useState(false);
+  const [onMarquee, setOnMarquee] = useState(false);
+  const notice = ""; //edit here to activate notice
   return (
     <nav className="bg-[#2e0f15] shadow-lg fixed w-full z-50">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <Image 
+              <Image
                 src="/logos/logo2025.png"
                 alt="logo"
                 width={50}
@@ -66,12 +66,12 @@ const Navbar = () => {
             >
               Timeline
             </Link>
-            <Link
+            {/* <Link
               href="/Sponsors"
               className="px-3 py-2 rounded-md hover:text-dull_gold"
             >
               Sponsors
-            </Link>
+            </Link> */}
           </div>
           <div className="-mr-2 flex items-center md:hidden">
             <button
@@ -91,7 +91,10 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 text-lg font-playfair" onClick={()=> setIsOpen(false)}>
+          <div
+            className="px-2 pt-2 pb-3 space-y-1 text-lg font-playfair"
+            onClick={() => setIsOpen(false)}
+          >
             <Link
               href="/"
               className="block px-3 py-2 rounded-md font-medium text-gold hover:text-blue-dull hover:bg-dull_gold"
@@ -134,26 +137,35 @@ const Navbar = () => {
             >
               Timeline
             </Link>
-            <Link
+            {/* <Link
               href="/Sponsors"
               className="block px-3 py-2 rounded-md font-medium text-gold hover:text-blue-dull hover:bg-dull_gold"
             >
               Sponsors
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}
       {notice && (
-        <div className="w-full bg-gold h-5" onMouseOver={()=>setOnMarquee(true)} onMouseOut={()=>setOnMarquee(false)} onTouchStart={()=>setOnMarquee(true)} onTouchEnd={()=>setOnMarquee(false)}>
+        <div
+          className="w-full bg-gold h-5"
+          onMouseOver={() => setOnMarquee(true)}
+          onMouseOut={() => setOnMarquee(false)}
+          onTouchStart={() => setOnMarquee(true)}
+          onTouchEnd={() => setOnMarquee(false)}
+        >
           {/* <div className={` text-sm text-blue-dull font-playfair w-full font-bold flex gap-2`}> */}
-          <div className={` text-sm text-blue-dull font-playfair w-full font-bold flex gap-2 ${!onMarquee ? 'animate-marquee': ''}`}> 
+          <div
+            className={` text-sm text-blue-dull font-playfair w-full font-bold flex gap-2 ${
+              !onMarquee ? "animate-marquee" : ""
+            }`}
+          >
             <p className="text-center w-full">{notice}</p>
           </div>
         </div>
       )}
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
-
+export default Navbar;
