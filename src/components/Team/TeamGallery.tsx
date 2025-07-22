@@ -38,50 +38,64 @@ interface categoryTitle {
 const staticYears: Year[] = [
   { id: "1", name: 2025 },
   { id: "2", name: 2024 },
-  { id: "3", name: 2023 },
-  { id: "4", name: 2022 },
-  { id: "5", name: 2021 },
+  
 ];
 
 const staticEntries: Record<string, YearEntries> = {
   "1": {
     Secretariat: [
-      { id: "e1", name: "Image1", position: "Secretary General", driveFileID: "", linkedIn: "", Instagram: "" },
-      { id: "e2", name: "Image2", position: "Director General", driveFileID: "", linkedIn: "", Instagram: "" },
-      { id: "e3", name: "Image3", position: "Deputy Secretary General", driveFileID: "", linkedIn: "", Instagram: "" },
-      { id: "e4", name: "Image4", position: "Executive Director", driveFileID: "", linkedIn: "", Instagram: "" },
-      { id: "e5", name: "Image5", position: "Chief Of Staff", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
+      { id: "e1", name: "Aahana Padole", position: "Secretary General", driveFileID: "1btK8SoYIVTdkMh2Z087BPzMluOjxROh-", linkedIn: "", Instagram: "" },
+      { id: "e2", name: "Aryan Jaisingh", position: "Director General", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e3", name: "Aarush Pakhale", position: "Deputy Secretary General", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e4", name: "Omair Potrick", position: "Executive Director", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e5", name: "Ayush Chhetry ", position: "Chief Of Staff", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
     ],
     USG: [
-      { id: "e6", name: "Image2", position: "USG Technical", driveFileID: "/images/team/Harsh_Dalvi.jpg", linkedIn: "", Instagram: "" },
-      { id: "e7", name: "Image2", position: "USG Technical", driveFileID: "", linkedIn: "", Instagram: "" },
-      { id: "e8", name: "Image2", position: "USG Outreach", driveFileID: "", linkedIn: "", Instagram: "" },
-      { id: "e9", name: "Image2", position: "USG Outreach", driveFileID: "", linkedIn: "", Instagram: "" },
-      { id: "e10", name: "Image2", position: "USG Design", driveFileID: "", linkedIn: "", Instagram: "" },
-      { id: "e11", name: "Image2", position: "USG Design", driveFileID: "", linkedIn: "", Instagram: "" },
-      { id: "e12", name: "Image2", position: "USG Delegate Affairs", driveFileID: "", linkedIn: "", Instagram: "" },
-      { id: "e13", name: "Image2", position: "USG Delegate Affairs", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
-      { id: "e14", name: "Image2", position: "USG Operations", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
-      { id: "e15", name: "Image2", position: "USG Operations", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
-      { id: "e16", name: "Image2", position: "USG Content and Research", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
-      { id: "e17", name: "Image2", position: "USG Content and Research", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
-      { id: "e18", name: "Image2", position: "USG Marketing", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
-      { id: "e19", name: "Image2", position: "USG Marketing", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
+      { id: "e6", name: "Harsh Dalvi", position: "USG Technical", driveFileID: "1GMebGzmh4f5QoE2CPjRifCU-X70GJVPL", linkedIn: "http://www.linkedin.com/in/harsh-dalvi-975b292a9", Instagram: "https://www.instagram.com/harsh.d_01?igsh=c3gyeXE4bDIzbWlx" },
+      { id: "e7", name: "Hardik Gujrathi", position: "USG Technical", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e8", name: "Unnati Jain", position: "USG Outreach", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e9", name: "Diya Shah", position: "USG Outreach", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e10", name: "Anjali Salway", position: "USG Design", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e11", name: "Gauravi Mutha", position: "USG Design", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e12", name: "Aayush Meghal", position: "USG Delegate Affairs", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e13", name: "Dhawal Talele", position: "USG Delegate Affairs", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e14", name: "Rugved Padalkar", position: "USG Operations", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e15", name: "Aditya Naik", position: "USG Operations", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e16", name: "Mrugaja Joshi", position: "USG Content and Research", driveFileID: "1CFMVMckvYLFodRy2v6ixrfrPEnAfDch2", linkedIn: "", Instagram: "" },
+      { id: "e17", name: "Chinmay Joshi", position: "USG Content and Research", driveFileID: "1pKE1hLEjnOWhI4OwxXJ8ca_O_-DJbxic", linkedIn: "", Instagram: "" },
+      { id: "e18", name: "Ameya Dusane", position: "USG Marketing", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e19", name: "Kaustubh Banerjee", position: "USG Marketing", driveFileID: "", linkedIn: "", Instagram: "" },
     ],
     Other: [
-      { id: "e20", name: "Image3", position: "Design", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
+      
     ],
   },
   "2": {
-    Secretariat: [],
-    USG: [],
+    Secretariat: [
+      { id: "e1", name: "Sakshi Mahajan", position: "Secretary General", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e2", name: "Tanish Chaudhari", position: "Director General", driveFileID: "", linkedIn: "https://www.linkedin.com/in/tanishchaudhari/", Instagram: "https://www.instagram.com/tanishc228/" },
+      { id: "e3", name: "Ansh Vora", position: "Charge D'affairs", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e4", name: "Manasi Waghe", position: "Executive Director", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e5", name: "Mohammad Abbasi", position: "Chief Of Staff", driveFileID: "1HH7THNtAPLNb-deICreL5THfptCiDKi8", linkedIn: "https://www.linkedin.com/in/mohammed-abbasi-a8ab80271", Instagram: "" },
+    ],
+    USG: [
+      { id: "e6", name: "Apurwa Kanitkar", position: "USG Content and Research", driveFileID: "", linkedIn: "https://www.linkedin.com/in/apurwa-kanitkar", Instagram: "https://www.instagram.com/apurwa.k_04?igsh=YXR1MmM4NHZzc2k1" },
+      { id: "e7", name: "Anvita", position: "USG Content and Research", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e8", name: "Piyush Kinekar", position: "USG Marketing", driveFileID: "1rueNUEWaZBngYuO0FQRWC1fmnaOg19Pa", linkedIn: "https://www.linkedin.com/in/piyush-kinekar-883163272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", Instagram: "https://www.instagram.com/piyush_kinekar?igsh=N2N2azMybGJlbWl3&utm_source=qr" },
+      { id: "e9", name: "Utsaah", position: "USG Marketing", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e10", name: "Vedant Shinde", position: "USG Design", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e11", name: "Sanjeev Hotha", position: "USG Design", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e12", name: "Nirbhay Shah", position: "USG Delegate Affairs", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e13", name: "Shloka Shetty", position: "USG Delegate Affairs", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e14", name: "Dhruv Arun", position: "USG Operations", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e15", name: "Harjas", position: "USG Operations", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e16", name: "Shravani Chougule", position: "USG Outreach", driveFileID: "", linkedIn: "", Instagram: "" },
+      { id: "e17", name: "Ayush Wattamwar", position: "USG Outreach", driveFileID: "", linkedIn: "", Instagram: "" },
+      
+    ],
     Other: [],
   },
-  "3": {
-    Secretariat: [],
-    USG: [],
-    Other: [],
-  },
+ 
 };
 
 const categoryTitle: categoryTitle = {

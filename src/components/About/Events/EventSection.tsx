@@ -7,20 +7,36 @@ const EventSection = () => {
         '/images/Events/Conference/2.JPG',
         '/images/Events/Conference/3.jpg',
   ];
+  const conference1=[
+        '/images/Events/Conference2025/1.JPG',
+        '/images/Events/Conference2025/2.JPG',
+        '/images/Events/Conference2025/3.jpg',
+  ];
   const intra=[
         '/images/Events/Intra/1.jpg',
         '/images/Events/Intra/2.jpg',
         '/images/Events/Intra/3.jpg',
   ];
+ 
   const adlib=[
         '/images/Events/Adlib/1.jpg',
         '/images/Events/Adlib/2.jpg',
         '/images/Events/Adlib/3.jpg',
   ];
+   const adlib1=[
+        '/images/Events/Adlib2025/first.jpg',
+        '/images/Events/Adlib2025/second.jpg',
+        '/images/Events/Adlib2025/third.jpg',
+  ];
   const FEinduction=[
-        '/images/Events/Conference/1.JPG',
-        '/images/Events/Conference/2.JPG',
-        '/images/Events/Conference/3.jpg',
+        '/images/Events/FE_Induction/1.JPEG',
+        '/images/Events/FE_Induction/2.JPEG',
+        '/images/Events/FE_Induction/3.jPEg',
+  ];
+  const FEinduction2025=[
+        '/images/Events/FE_Induction2025/1.JPG',
+        '/images/Events/FE_Induction2025/2.JPG',
+        
   ];
   const data = [
     {
@@ -36,7 +52,7 @@ const EventSection = () => {
                     </ImagesSlider>
                     <ImagesSlider
                         className="w-auto h-full max-h-[550px] rounded-2xl object-contain"
-                        images={conference}
+                        images={conference1}
                         >
                         <div></div>
                     </ImagesSlider>
@@ -80,7 +96,7 @@ const EventSection = () => {
                     </ImagesSlider>
                     <ImagesSlider
                         className="w-auto h-full max-h-[550px] rounded-2xl object-contain"
-                        images={adlib}
+                        images={adlib1}
                         >
                         <div></div>
                     </ImagesSlider>
@@ -102,7 +118,7 @@ const EventSection = () => {
                     </ImagesSlider>
                     <ImagesSlider
                         className="w-auto h-full max-h-[550px] rounded-2xl object-contain"
-                        images={FEinduction}
+                        images={FEinduction2025}
                         >
                         <div></div>
                     </ImagesSlider>
