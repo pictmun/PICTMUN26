@@ -32,7 +32,12 @@ const Landing = () => {
         <p className="text-xl md:text-4xl pointer-events-none">
           Think • Discuss • Prosper
         </p>
-        <Link target="_blank" href={"https://linktr.ee/pictmun"}>
+        <Link
+          target="_blank"
+          href={
+            "https://docs.google.com/forms/d/1-HZUFPU8eMTI0BOIin9aot_JIBe5MVsVVujqezEeXyk/edit?usp=drivesdk"
+          }
+        >
           <TailwindButton text="Register" cls="px-8 py-1" />
         </Link>
       </div>

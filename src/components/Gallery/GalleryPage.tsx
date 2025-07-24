@@ -2,11 +2,11 @@
 
 import { X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 interface Folder {
   id: string;
@@ -29,7 +29,9 @@ export default function GalleryPage() {
   const [selectedFolder, setSelectedFolder] = useState<Folder | null>(null);
   const [files, setFiles] = useState<FileItem[]>([]);
   const [loadingFiles, setLoadingFiles] = useState(false);
-  const [folderCache, setFolderCache] = useState<Record<string, FileItem[]>>({});
+  const [folderCache, setFolderCache] = useState<Record<string, FileItem[]>>(
+    {}
+  );
 
   // Fetch year folders from API
   useEffect(() => {
@@ -38,15 +40,18 @@ export default function GalleryPage() {
       try {
         const res = await fetch("/api/gallery/");
         const data = await res.json();
+        console.log("Folder list response:", data);
 
-        const sortedFolders = (data.folders || []).sort((a: Folder, b: Folder) => {
-          const yearA = parseInt(a.name);
-          const yearB = parseInt(b.name);
-          if (!isNaN(yearA) && !isNaN(yearB)) {
-            return yearB - yearA;
+        const sortedFolders = (data.folders || []).sort(
+          (a: Folder, b: Folder) => {
+            const yearA = parseInt(a.name);
+            const yearB = parseInt(b.name);
+            if (!isNaN(yearA) && !isNaN(yearB)) {
+              return yearB - yearA;
+            }
+            return b.name.localeCompare(a.name);
           }
-          return b.name.localeCompare(a.name);
-        });
+        );
 
         setFolders(sortedFolders);
       } catch (error) {
@@ -115,20 +120,21 @@ export default function GalleryPage() {
       ) : (
         <div className="w-full relative">
           <Swiper
-            style={{padding: '36px'}}
+            style={{ padding: "36px" }}
             slidesPerView={2}
             spaceBetween={20}
             centeredSlides={true}
             modules={[Navigation, Pagination]}
             className="w-full max-w-md md:max-w-lg py-4 relative"
             navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
             }}
             pagination={{
               clickable: true,
-              bulletClass: 'swiper-pagination-bullet custom-bullet',
-              bulletActiveClass: 'swiper-pagination-bullet-active custom-bullet-active',
+              bulletClass: "swiper-pagination-bullet custom-bullet",
+              bulletActiveClass:
+                "swiper-pagination-bullet-active custom-bullet-active",
             }}
           >
             {folders.map((folder) => (
@@ -139,9 +145,10 @@ export default function GalleryPage() {
                     fetchFiles(folder.id);
                   }}
                   className={`w-full px-4 py-2 rounded-lg font-semibold text-xl transition
-                    ${selectedFolder?.id === folder.id
-                      ? 'bg-dull_gold text-blue-dull'
-                      : 'bg-blue-dull text-dull_gold'
+                    ${
+                      selectedFolder?.id === folder.id
+                        ? "bg-dull_gold text-blue-dull"
+                        : "bg-blue-dull text-dull_gold"
                     }`}
                 >
                   Year {folder.name}
@@ -149,9 +156,15 @@ export default function GalleryPage() {
               </SwiperSlide>
             ))}
           </Swiper>
-           {/* Navigation Buttons (outside the Swiper) */}
-          <div className="swiper-button-prev invisible md:visible" style={{ color: '#e6ba63' }}></div>
-          <div className="swiper-button-next invisible md:visible" style={{ color: '#e6ba63' }}></div>
+          {/* Navigation Buttons (outside the Swiper) */}
+          <div
+            className="swiper-button-prev invisible md:visible"
+            style={{ color: "#e6ba63" }}
+          ></div>
+          <div
+            className="swiper-button-next invisible md:visible"
+            style={{ color: "#e6ba63" }}
+          ></div>
           {/* Pagination buttons */}
           <div className="swiper-pagination mt-6" />
         </div>
@@ -164,7 +177,10 @@ export default function GalleryPage() {
           ) : files.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {files.map((file) => (
-                <div key={file.id} className="relative w-full h-[30vh] md:h-[40vh] overflow-hidden rounded-2xl">
+                <div
+                  key={file.id}
+                  className="relative w-full h-[30vh] md:h-[40vh] overflow-hidden rounded-2xl"
+                >
                   <img
                     src={`https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`}
                     alt={file.name}
@@ -186,7 +202,10 @@ export default function GalleryPage() {
           className="fixed inset-0 bg-black/85 bg-opacity-80 flex items-center justify-center z-50"
           onClick={() => setExpandedImage(null)} // Clicking outside closes
         >
-          <div className="relative max-h-screen overflow-scroll max-w-6xl w-full px-4" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="relative max-h-screen overflow-scroll max-w-6xl w-full px-4"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img
               src={`https://drive.google.com/thumbnail?id=${expandedImage.id}&sz=w1024`}
               alt={expandedImage.name}
@@ -198,7 +217,7 @@ export default function GalleryPage() {
             onClick={() => setExpandedImage(null)}
             className="absolute top-0 right-0 transform translate-y-1/2 -translate-x-1/2 text-gold bg-blue-dull p-2 rounded-lg text-3xl font-bold z-50"
           >
-            <X/>
+            <X />
           </button>
         </div>
       )}

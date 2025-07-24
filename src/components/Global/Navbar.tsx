@@ -7,7 +7,8 @@ import Image from "next/image";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [onMarquee, setOnMarquee] = useState(false);
-  const notice = ""; //edit here to activate notice
+  const notice =
+    "🚨 Priority Registration for PICTMUN'25 is Now Live! Secure Your Spot Today 🚨";
   return (
     <nav className="bg-[#2e0f15] shadow-lg fixed w-full z-50">
       <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -148,19 +149,18 @@ const Navbar = () => {
       )}
       {notice && (
         <div
-          className="w-full bg-gold h-5"
+          className="w-full bg-gold overflow-hidden h-7 flex items-center"
           onMouseOver={() => setOnMarquee(true)}
           onMouseOut={() => setOnMarquee(false)}
           onTouchStart={() => setOnMarquee(true)}
           onTouchEnd={() => setOnMarquee(false)}
         >
-          {/* <div className={` text-sm text-blue-dull font-playfair w-full font-bold flex gap-2`}> */}
           <div
-            className={` text-sm text-blue-dull font-playfair w-full font-bold flex gap-2 ${
+            className={`whitespace-nowrap text-sm text-blue-dull font-playfair font-bold w-full ${
               !onMarquee ? "animate-marquee" : ""
             }`}
           >
-            <p className="text-center w-full">{notice}</p>
+            <p className="px-4">{notice}</p>
           </div>
         </div>
       )}
