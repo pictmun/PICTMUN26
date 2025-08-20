@@ -7,11 +7,11 @@ import Testimonials from "@/components/Home/Testimonials";
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <Landing/>
-      <AboutClub/>
-      <OurNewsletter/>
-      <HomePageHighlights/>
-      <Testimonials/>
+      <Landing />
+      <AboutClub />
+      <OurNewsletter />
+      <HomePageHighlights />
+      {/* <Testimonials/> */}
     </div>
   );
 }
