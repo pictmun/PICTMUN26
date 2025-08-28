@@ -50,7 +50,7 @@ const Footer = () => {
               Aayush Meghal -{" "}
               <Link
                 target="_blank"
-                href="tel:+917020899506"
+                href="tel:+919405417042"
                 className="text-lg  hover:text-gold hover:underline"
               >
                 +919405417042
@@ -60,7 +60,7 @@ const Footer = () => {
               Dhawal Talele -{" "}
               <Link
                 target="_blank"
-                href="tel:+917020899506"
+                href="tel:+919699086529"
                 className="text-lg hover:text-gold hover:underline"
               >
                 +919699086529
