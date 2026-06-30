@@ -44,7 +44,7 @@ const Navbar = () => {
               Events
             </Link>
             <Link
-              href="/Inquisitor"
+              href="https://inquisitor.pictmun.in/"
               className="px-3 py-2 rounded-md hover:text-dull_gold"
             >
               Inquisitor
@@ -115,7 +115,7 @@ const Navbar = () => {
               Events
             </Link>
             <Link
-              href="/Inquisitor"
+              href="https://inquisitor.pictmun.in/"
               className="block px-3 py-2 rounded-md font-medium text-gold hover:text-blue-dull hover:bg-dull_gold"
             >
               Inquisitor
