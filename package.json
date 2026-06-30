@@ -13,6 +13,7 @@
     "@tabler/icons-react": "^3.31.0",
     "aos": "^2.3.4",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.42.0",
     "googleapis": "^148.0.0",
     "lucide-react": "^0.503.0",
     "motion": "^12.9.2",
@@ -32,6 +33,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.185.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
