@@ -9,7 +9,8 @@ const Navbar = () => {
   const [onMarquee, setOnMarquee] = useState(false);
   const notice1 =
     "🚨 SAVE THE DATES 🚨 | PICT MUN 2026 | 📅 31st October – 1st November | Think • Discuss • Prosper 🌍";
-  const notice2 = "🚨 PRIORITY DELEGATE & EXECUTIVE BOARD REGISTRATIONS ARE NOW LIVE! 🚨 Apply today and be part of PICT MUN 2026! 🌍";
+  const notice2 =
+    "🎉 DELEGATE REGISTRATIONS ARE NOW LIVE! 🎉 Apply today and be part of PICT MUN 2026! 🌍";
   return (
     <nav className="fixed w-full z-50 bg-deep-emerald/90 backdrop-blur-md border-b border-antique-gold/20 shadow-xl">
       <div className="w-full px-4 sm:px-6 lg:px-8">

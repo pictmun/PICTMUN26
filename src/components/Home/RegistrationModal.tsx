@@ -56,7 +56,7 @@ export default function RegistrationModal({
 
           <div className="flex flex-col w-full gap-4 sm:gap-6 mt-4">
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfngqawiXNISHxM9Wrt-x2mu8dtfPEO2Qx-9bL_HC7v4Jz2ww/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnTZYdtZ9xqqu-FWIq-tLLljxOBBXjSoNt4RCSKefqu5UDms3hQ1ntuXAwUaM_aem_AsX144xz9hm8dK6F7nxDkQ"
+              href="https://forms.gle/LeyASLKr2dzbspxa9"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative flex w-full items-center justify-between overflow-hidden rounded-xl bg-deep-emerald border border-antique-gold/40 px-6 py-5 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(166,124,82,0.3)] hover:border-antique-gold"
@@ -64,7 +64,7 @@ export default function RegistrationModal({
               <div className="absolute inset-0 bg-gradient-to-r from-antique-gold/0 via-antique-gold/30 to-antique-gold/0 translate-x-[-100%] transition-transform duration-700 group-hover:translate-x-[100%]" />
               <div className="flex flex-col items-start text-left relative z-10">
                 <span className="text-lg md:text-xl font-semibold text-warm-ivory font-playfair">
-                  Priority Registration
+                  General Registration
                 </span>
                 <span className="text-xs md:text-sm text-warm-ivory/70 font-montserrat mt-1">
                   For Delegates
@@ -73,23 +73,22 @@ export default function RegistrationModal({
               <ExternalLink className="h-5 w-5 text-antique-gold transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 relative z-10" />
             </Link>
 
-            <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd6LYw-JAHOo26vQcsIJHn3fLBqXcq1Tx-DU2qUuXqBEhipIA/viewform?pli=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnQ0yVeRLsGGOFUgGKLSdWSRHHDeJEGQkcDtnYtawviaOmVQgnVFAWjH-db_E_aem_9M9LUWHaJGFsypp9g0oeUQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex w-full items-center justify-between overflow-hidden rounded-xl bg-deep-emerald border border-antique-gold/40 px-6 py-5 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(166,124,82,0.3)] hover:border-antique-gold"
+            {/* View Brochure - Prepared for /brochure/pictmun26.pdf */}
+            <button
+              type="button"
+              className="group relative flex w-full items-center justify-between overflow-hidden rounded-xl bg-deep-emerald border border-antique-gold/40 px-6 py-5 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(166,124,82,0.3)] hover:border-antique-gold text-left"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-antique-gold/0 via-antique-gold/30 to-antique-gold/0 translate-x-[-100%] transition-transform duration-700 group-hover:translate-x-[100%]" />
               <div className="flex flex-col items-start text-left relative z-10">
                 <span className="text-lg md:text-xl font-semibold text-warm-ivory font-playfair">
-                  EB Registration
+                  View Brochure
                 </span>
                 <span className="text-xs md:text-sm text-warm-ivory/70 font-montserrat mt-1">
-                  For Executive Board
+                  PICT MUN 2026 Brochure
                 </span>
               </div>
               <ExternalLink className="h-5 w-5 text-antique-gold transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 relative z-10" />
-            </Link>
+            </button>
           </div>
         </div>
       </div>
