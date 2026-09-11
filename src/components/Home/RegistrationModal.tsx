@@ -25,6 +25,21 @@ export default function RegistrationModal({
     };
   }, [onClose]);
 
+  const handleViewBrochure = () => {
+    const brochureUrl = "/brochure/PICTMUN26_Brochure.pdf";
+
+    // Open PDF in another window/tab
+    window.open(brochureUrl, "_blank", "noopener,noreferrer");
+
+    // Simultaneously trigger file download
+    const link = document.createElement("a");
+    link.href = brochureUrl;
+    link.download = "PICTMUN26_Brochure.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto p-4">
       <div
@@ -73,10 +88,11 @@ export default function RegistrationModal({
               <ExternalLink className="h-5 w-5 text-antique-gold transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 relative z-10" />
             </Link>
 
-            {/* View Brochure - Prepared for /brochure/pictmun26.pdf */}
+            {/* View Brochure */}
             <button
               type="button"
-              className="group relative flex w-full items-center justify-between overflow-hidden rounded-xl bg-deep-emerald border border-antique-gold/40 px-6 py-5 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(166,124,82,0.3)] hover:border-antique-gold text-left"
+              onClick={handleViewBrochure}
+              className="group relative flex w-full items-center justify-between overflow-hidden rounded-xl bg-deep-emerald border border-antique-gold/40 px-6 py-5 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(166,124,82,0.3)] hover:border-antique-gold text-left cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-antique-gold/0 via-antique-gold/30 to-antique-gold/0 translate-x-[-100%] transition-transform duration-700 group-hover:translate-x-[100%]" />
               <div className="flex flex-col items-start text-left relative z-10">
